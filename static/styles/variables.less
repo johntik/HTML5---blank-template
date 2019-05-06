@@ -1,0 +1,77 @@
+// Variables
+// --------------------
+
+// Colors
+// --------------------
+@black:				#000;
+@gray:      		#555;
+@gray-light:		#ddd;
+@white:     		#fff;
+@red:				#ff0000;
+@green:				#008000;
+
+// Link
+// --------------------
+@link:				@green;
+@link-hover:    	darken(@link, 15%);
+
+
+// Typography
+// --------------------
+@san-serif:			"Titillium web", sans-serif;
+@serif:				Georgia, "Times New Roman", serif;
+@monospace:     	Monaco, "Courier New", monospace;
+
+// Size
+// --------------------
+@font-size:			16px;
+@line-height:		25px;
+
+// Tables
+// -------------------------
+@table-bg:			transparent;
+@table-border:		@gray-light;
+
+// Buttons
+// -------------------------
+@btn:				@white;
+@btn-border:		@gray-light;
+
+// Grid
+// -------------------------
+
+// Grid > 960px
+@media screen and (min-width: 980px) {
+	@column-width: 	60;
+	@spacing: 		20;
+	@columns: 		12;
+	@grid-960: 		(@column-width*@columns) + (@spacing*@columns) * 1px;
+	
+	#container {
+		width: @grid-960;
+	}
+}
+
+// Grid < 960px
+@media screen and (max-width: 979px) {
+	@column-width: 	40;
+	@spacing: 		10;
+	@columns: 		12;
+	@grid-800: 		(@column-width*@columns) + (@spacing*@columns) * 1px;
+
+	#container {
+		width: @grid-800;
+	}
+}
+
+// Grid < 600px
+@media screen and (max-width: 610px) {
+	@column-width: 	20;
+	@spacing: 		10;
+	@columns: 		12;
+	@grid-600: 		(@column-width*@columns) + (@spacing*@columns) * 1px;
+
+	#container {
+		width: @grid-600;
+	}
+}
